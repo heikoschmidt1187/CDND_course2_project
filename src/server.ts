@@ -30,7 +30,13 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   /**************************************************************************** */
 
   app.get( "/filteredimage", async ( req, res ) => {
-    res.send("this is a test for the endpoint")
+      // get url to retrieve image from
+      const image_url = req.query.image_url;
+
+      // check if url is present
+      if(!image_url) {
+          res.status(400).send({message: 'No image url provided'})
+      }
   });
 
   //! END @TODO1
