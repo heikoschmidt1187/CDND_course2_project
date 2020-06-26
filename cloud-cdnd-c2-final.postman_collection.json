@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "14804018-e85e-4751-b01b-d1fd496cfd42",
+		"_postman_id": "df7b2d8c-caec-4e0d-8cd6-4fe2781857e9",
 		"name": "cloud-cdnd-c2-final",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HOST}}/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
+					"raw": "http://{{HOST}}/filteredimage?image_url=https://geliebte-katze.de/sites/geliebte-katze.de/files/spielregeln-katze.jpg",
 					"protocol": "http",
 					"host": [
 						"{{HOST}}"
@@ -22,7 +22,7 @@
 					"query": [
 						{
 							"key": "image_url",
-							"value": "https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg"
+							"value": "https://geliebte-katze.de/sites/geliebte-katze.de/files/spielregeln-katze.jpg"
 						}
 					]
 				}
@@ -35,10 +35,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HOST}}/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
+					"raw": "http://{{EB_URL}}/filteredimage?image_url=https://geliebte-katze.de/sites/geliebte-katze.de/files/spielregeln-katze.jpg",
 					"protocol": "http",
 					"host": [
-						"{{HOST}}"
+						"{{EB_URL}}"
 					],
 					"path": [
 						"filteredimage"
@@ -46,7 +46,7 @@
 					"query": [
 						{
 							"key": "image_url",
-							"value": "https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg"
+							"value": "https://geliebte-katze.de/sites/geliebte-katze.de/files/spielregeln-katze.jpg"
 						}
 					]
 				}
@@ -58,7 +58,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "709d618b-b40a-4d83-be37-b79ed883455a",
+				"id": "79e86999-6b06-44d2-b67d-e8a4a5019a12",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -68,7 +68,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7977a872-76c4-48f5-a708-08d2f8fec3a7",
+				"id": "50ac993b-30b2-485c-987e-e1d28f5beca0",
 				"type": "text/javascript",
 				"exec": [
 					""
