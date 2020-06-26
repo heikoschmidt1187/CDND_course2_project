@@ -35,7 +35,30 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
       // check if url is present
       if(!image_url) {
-          res.status(400).send({message: 'No image url provided'})
+          res.status(400).send({message: 'No image url provided'});
+      }
+
+      // handle exceptions to respond in a clean state
+      try {
+          // filter the image
+          const filtered = await filterImageFromURL(image_url);
+
+          // send the image as response
+          let local_paths: string[] = [];
+
+          res.sendFile(filtered, (err) => {
+              local_paths.push(filtered);
+
+              if(err) {
+                  console.log(err);
+              }
+
+              // ensure to remove all local files
+              deleteLocalFiles(local_paths);
+          });
+
+      } catch (error) {
+          res.status(422).send({message: "Provided URL immage cannot be processed"});
       }
   });
 
